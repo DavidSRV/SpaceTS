@@ -1,0 +1,37 @@
+nav {
+    padding-top: 2.5rem;
+
+    & .navBar__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        & .navBar__icon {
+
+            margin-left: 3.438rem;
+
+        }
+
+
+        & .navBar__links {
+            width: 60%;
+            height: 6rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            backdrop-filter: blur(15px);
+            background-color: rgba(255, 255, 255, 0.047);
+
+            & a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+
+
+
+}
