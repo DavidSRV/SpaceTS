@@ -1,12 +1,22 @@
 import Home from './pages/home/Home';
 import info from './utils/data.json';
-import {Router, Routes} from 'react-router'
+import {Route, Routes} from 'react-router-dom'
+import NavBar from './components/navbar/NavBar';
+import Crew from './pages/crew/Crew';
+import Destination from './pages/destination/Destination';
+import Technology from './pages/technology/Technology';
 
 
 function App():JSX.Element {
   return (
     <div className="App">
-      <Home/>
+      <NavBar/>
+    <Routes  >
+    <Route path='/' element={<Home/>} />
+    <Route path='/' element={<Crew/>} />
+    <Route path='/' element={<Destination/>} />
+    <Route path='/' element={<Technology/>} />
+    </Routes>
     </div>
   );
 }

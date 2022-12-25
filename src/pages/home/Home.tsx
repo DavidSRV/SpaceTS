@@ -3,8 +3,8 @@ import './_home.scss';
 
 const Home:React.FC = () => {
   return (
-    <div>Home</div>
-  )
+    <div>always</div>
+    )
 }
 
 export default Home
