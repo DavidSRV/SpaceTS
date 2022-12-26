@@ -1,3 +1,5 @@
+@use '../../style/colors' as *;
+
 body{
     background-image: url('../../assets/home/background-home-desktop.jpg');
     background-position: center;
@@ -5,4 +7,39 @@ body{
     background-repeat: no-repeat;
     height: 100vh;
     position: relative;
+}
+
+.home{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    & .home__description{
+        width: 27.813rem;
+        height: 24.063rem;
+        color: $basic1;
+
+        & .home__title{
+            font-size: 9.3759rem;
+        }
+
+        & p{
+            font-size: 1.125rem;
+        }
+        
+    }
+
+
+    & .home__button{
+
+        background-color: $basic1;
+        border-radius: 50%;
+    
+        & p{
+            font-size: 2rem;
+        }
+
+    }
+
 }
