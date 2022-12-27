@@ -14,14 +14,22 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: relative;
+    top: 180px;
+   
+
 
     & .home__description{
         width: 27.813rem;
         height: 24.063rem;
         color: $basic1;
+        display: flex;
+        flex-direction: column;
 
         & .home__title{
             font-size: 9.3759rem;
+            margin: auto;
+
         }
 
         & p{
@@ -35,6 +43,10 @@ body{
 
         background-color: $basic1;
         border-radius: 50%;
+        width: 274px;
+        height: 274px;
+        display: grid;
+        place-content: center;
     
         & p{
             font-size: 2rem;
