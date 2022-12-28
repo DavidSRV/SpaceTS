@@ -14,9 +14,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    position: relative;
-    top: 180px;
-   
+    position: absolute;
+    top: 50%;
+    left: 20%;
 
 
     & .home__description{
@@ -35,7 +35,6 @@ body{
         & p{
             font-size: 1.125rem;
         }
-        
     }
 
 
