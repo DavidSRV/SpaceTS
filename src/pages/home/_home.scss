@@ -1,43 +1,44 @@
 @use '../../style/colors' as *;
 
-body{
+body {
     background-image: url('../../assets/home/background-home-desktop.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    // height: 100vh;
     position: relative;
+    height: 900px;
 }
 
-.home{
+.home {
 
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 30rem;
     margin-bottom: 1rem;
 
-
-    & .home__description{
+    & .home__description {
         width: 27.813rem;
         height: 24.063rem;
         color: $basic1;
         display: flex;
         flex-direction: column;
+        position: absolute;
+        top: 387px;
+        left: 165px;
 
-        & .home__title{
+        & .home__title {
             font-size: 9.3759rem;
             margin: auto;
 
         }
 
-        & p{
+        & p {
             font-size: 1.125rem;
         }
     }
 
 
-    & .home__button{
+    & .home__button {
 
         background-color: $basic1;
         border-radius: 50%;
@@ -45,8 +46,11 @@ body{
         height: 274px;
         display: grid;
         place-content: center;
-    
-        & p{
+        position: absolute;
+        top: 495px;
+        left: 1001px;
+
+        & p {
             font-size: 2rem;
         }
 

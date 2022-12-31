@@ -1,18 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
 nav {
     padding-top: 2.5rem;
+    font-family: 'Barlow Condensed', sans-serif;
 
     & .navBar__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-
         & .navBar__icon {
 
             margin-left: 3.438rem;
 
         }
-
 
         & .navBar__links {
             width: 60%;
@@ -27,6 +28,8 @@ nav {
                 color: white;
                 text-decoration: none;
                 font-size: 1.5rem;
+                text-transform: uppercase;
+
             }
         }
 
