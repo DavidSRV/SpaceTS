@@ -29,10 +29,31 @@ nav {
                 text-decoration: none;
                 font-size: 1.5rem;
                 text-transform: uppercase;
-
+                position: relative;
             }
+
+            & a::before{
+                content: "";
+                border: 1px solid white;
+                position: absolute;
+                bottom: 60px;
+                left: 0;
+                width: 100%;
+                transform: translateY(93px);
+                opacity: 0;
+                transition: 1s all;
+            }
+
+            & a:hover::before{
+                opacity: 1;
+                transition: 1s all;
+            }
+
         }
 
+        // & .navBar__links::after{
+        //     content: "";
+        //     border: 1px solid black;
+        // }
     }
-    
 }
