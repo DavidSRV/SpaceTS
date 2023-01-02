@@ -14,7 +14,9 @@ const Home: React.FC = () => {
         </p>
       </section>
       <section className="home__button">
+        <div className="home__button--hover">
           <p className="home__button__description">EXPLORE</p>
+        </div>
       </section>
     </main>
   );
