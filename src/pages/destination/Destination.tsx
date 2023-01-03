@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Destination = () => {
+const Destination:React.FC = () => {
   return (
     <div>Destination</div>
   )

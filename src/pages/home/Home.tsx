@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./_home.scss";
 
 const Home: React.FC = () => {
@@ -13,11 +14,13 @@ const Home: React.FC = () => {
           experience!
         </p>
       </section>
-      <section className="home__button">
-        <div className="home__button--hover">
-          <p className="home__button__description">EXPLORE</p>
-        </div>
-      </section>
+      <Link to="/Destionation">
+        <section className="home__button">
+          <div className="home__button--hover">
+            <p className="home__button__description">EXPLORE</p>
+          </div>
+        </section>                  
+      </Link>
     </main>
   );
 };
