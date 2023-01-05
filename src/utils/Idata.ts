@@ -23,7 +23,6 @@ interface Idestinations{
     travel:string
 }
 
-
 interface Icrew{
     name:string,
     images:Iimages,
