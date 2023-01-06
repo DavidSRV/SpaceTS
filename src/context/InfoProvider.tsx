@@ -1,12 +1,14 @@
 import React,{createContext, useContext, useState} from 'react'
-import data from  '../utils/data.json'
+import dataInfo from  '../utils/data.json'
+import { Idata } from '../utils/Idata';
 
-export dataContext = React.createContext< | null>(null);
+const DataContext = createContext<Idata>;
 
-function InfoProvider({children}) {
-  return (
-    <div>InfoProvider</div>
+export const DataProvider:React.FC = ({children}:any) => {
+  const [data, setData ] = useState<Idata>(dataInfo);
+
+  return(
+    <DataContext.Provider value={{data, setData}}>{children}</DataContext.Provider>
   )
-}
 
-export default InfoProvider
+}
