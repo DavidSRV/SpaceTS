@@ -2,13 +2,20 @@ import React,{createContext, useContext, useState} from 'react'
 import dataInfo from  '../utils/data.json'
 import { Idata } from '../utils/Idata';
 
-const DataContext = createContext<Idata>;
+interface Props{
+  children:any,
+}
 
-export const DataProvider:React.FC = ({children}:any) => {
-  const [data, setData ] = useState<Idata>(dataInfo);
+const Info = createContext<Idata | null>(null);
+
+export default function infoProvider({children}:Props):JSX.Element{
+  
+  const [data, setData] = useState<Idata>(dataInfo);
 
   return(
-    <DataContext.Provider value={{data, setData}}>{children}</DataContext.Provider>
+    <Info.Provider value={data, setData}></Info.Provider>
   )
+
+
 
 }
