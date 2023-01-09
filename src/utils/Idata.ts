@@ -1,3 +1,5 @@
+import { type } from "os"
+
 interface Iimages{
     png:string,
     webp:string
@@ -29,9 +31,7 @@ interface Itechnology{
     description:string
 }
 
-export interface Idata{
-    destinations?:Idestinations,
-    crew?:Icrew,
-    technology?:Itechnology,
+export type Idata = {
+    data: Idestinations | Icrew | Itechnology
 }
 
