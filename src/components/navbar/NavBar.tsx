@@ -4,6 +4,7 @@ import icon from "../../assets/shared/logo.svg";
 import { Link } from "react-router-dom";
 
 const NavBar: React.FC = () => {
+
   return (
     <nav className="navBar">
       <div className="navBar__container">

@@ -4,11 +4,6 @@ import { Idata } from '../../utils/Idata'
 
 const Destination:React.FC = () => {
 
-
-
-
-
-
   return (
     <div>Destination</div>
   )

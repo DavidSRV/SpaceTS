@@ -1,4 +1,3 @@
-import { type } from "os"
 
 interface Iimages{
     png:string,
