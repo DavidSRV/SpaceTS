@@ -30,7 +30,7 @@ interface Itechnology{
     description:string
 }
 
-export type Idata = {
+export interface Idata{
     data: Idestinations | Icrew | Itechnology
 }
 
