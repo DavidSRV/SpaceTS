@@ -10,13 +10,13 @@ import { useState } from "react";
 
 function App(): JSX.Element {
 
-  const [info, setInfo] = useState<Idata["data"]>(data)
+  const [crew, setCrew] = useState()
 
   return (
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home  />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Crew" element={<Crew />} />
         <Route path="/Destination" element={<Destination />} />
         <Route path="/Technology" element={<Technology />} />

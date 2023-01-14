@@ -1,3 +1,4 @@
+import { type } from "os"
 
 interface Iimages{
     png:string,
@@ -30,7 +31,7 @@ interface Itechnology{
     description:string
 }
 
-export interface Idata{
-    data: Idestinations | Icrew | Itechnology
+export interface Idata {
+    data: Idestinations[] | Icrew[] | Itechnology[]
 }
 
