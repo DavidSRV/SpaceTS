@@ -17,9 +17,9 @@ function App(): JSX.Element {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Crew" element={<Crew info={info.crew}/>} />
-        <Route path="/Destination" element={<Destination />} />
-        <Route path="/Technology" element={<Technology />} />
+        <Route path="/Crew" element={<Crew info={info}/>} />
+        <Route path="/Destination" element={<Destination info={info}/>} />
+        <Route path="/Technology" element={<Technology info={info}/>} />
       </Routes>
     </div>
   );

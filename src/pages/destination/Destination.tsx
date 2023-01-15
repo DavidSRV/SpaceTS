@@ -1,12 +1,8 @@
-import React from 'react'
-import data from '../../utils/data.json'
-import { Idata } from '../../utils/Idata'
+import React from "react";
+import { Iinfo } from "../../utils/Idata";
 
-const Destination:React.FC = () => {
+const Destination = ({ info }: Iinfo): JSX.Element => {
+  return <div>Destination</div>;
+};
 
-  return (
-    <div>Destination</div>
-  )
-}
-
-export default Destination
+export default Destination;

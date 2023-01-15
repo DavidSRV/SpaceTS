@@ -1,10 +1,8 @@
-import React from 'react'
-import { Iinfo } from '../../utils/Idata'
+import React from "react";
+import { Iinfo } from "../../utils/Idata";
 
-const Crew = ({crew}:Iinfo["info"]) => {
-  return (
-    <div></div>
-  )
-}
+const Crew = ({ info }: Iinfo): JSX.Element => {
+  return <div></div>;
+};
 
-export default Crew
+export default Crew;
