@@ -1,8 +1,10 @@
 import React from "react";
-import { Iinfo } from "../../utils/Idata";
+import { IDestination } from "../../App";
 
-const Destination = ({ info }: Iinfo): JSX.Element => {
-  return <div>Destination</div>;
+const Destination = ({ destination }: IDestination): JSX.Element => {
+  return <>{destination.map((destination) => <div>
+    {destination.name}
+  </div> )}</>;
 };
 
 export default Destination;
