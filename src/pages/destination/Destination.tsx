@@ -12,7 +12,9 @@ const Destination = ({ destination }: IDestination): JSX.Element => {
 
           <article>
             <div className="description__contaner">
-              <div className="description__scroll"></div>
+              <div className="description__scroll">
+
+              </div>
 
               <p className="description__name">{destination.name}</p>
               <p className="description__description">
@@ -30,7 +32,7 @@ const Destination = ({ destination }: IDestination): JSX.Element => {
             </div>
           </article>
         </section>
-      ))}
+      )).slice(3)}
     </>
   );
 };
