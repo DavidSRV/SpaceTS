@@ -5,24 +5,18 @@ import Crew from "./pages/crew/Crew";
 import Destination from "./pages/destination/Destination";
 import Technology from "./pages/technology/Technology";
 import { useState } from "react";
-
-export interface IDestination {
-  destination: {
-    name: string;
-    images: { png: string; webp: string };
-    description: string;
-    distance: string;
-    travel: string;
-  }[];
-}
+import europaImg from "./assets/destination/image-europa.png";
+import moonImg from "./assets/destination/image-moon.png";
+import marsImg from "./assets/destination/image-mars.png";
+import titanImg from "./assets/destination/image-titan.png";
+import { IDestination } from "./utils/models/interfaces";
 
 function App(): JSX.Element {
-
   const [destination, setDestination] = useState<IDestination["destination"]>([
     {
       name: "Moon",
       images: {
-        png: "../../assets/destination/image-moon.png",
+        png: moonImg,
         webp: "../../assets/destination/image-moon.webp",
       },
       description:
@@ -33,7 +27,7 @@ function App(): JSX.Element {
     {
       name: "Mars",
       images: {
-        png: "../../assets/destination/image-mars.png",
+        png: marsImg,
         webp: "../../assets/destination/image-mars.webp",
       },
       description:
@@ -44,7 +38,7 @@ function App(): JSX.Element {
     {
       name: "Europa",
       images: {
-        png: "../../assets/destination/image-europa.png",
+        png: europaImg,
         webp: "../../assets/destination/image-europa.webp",
       },
       description:
@@ -55,7 +49,7 @@ function App(): JSX.Element {
     {
       name: "Titan",
       images: {
-        png: "./assets/destination/image-titan.png",
+        png: titanImg,
         webp: "./assets/destination/image-titan.webp",
       },
       description:
@@ -70,12 +64,12 @@ function App(): JSX.Element {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Crew" element={<Crew  />} />
+        <Route path="/Crew" element={<Crew />} />
         <Route
           path="/Destination"
           element={<Destination destination={destination} />}
         />
-        <Route path="/Technology" element={<Technology  />} />
+        <Route path="/Technology" element={<Technology />} />
       </Routes>
     </div>
   );

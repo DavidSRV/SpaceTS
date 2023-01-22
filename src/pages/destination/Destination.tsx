@@ -1,13 +1,15 @@
 import React from "react";
-import { IDestination } from "../../App";
+import { IDestination } from "../../utils/models/interfaces";
 
 const Destination = ({ destination }: IDestination): JSX.Element => {
+
+
   return (
     <>
       {destination.map((destination) => (
         <section>
           <article className="container__img">
-            <img src="" alt={destination.name} />
+            <img src={destination.images.png} alt={destination.name} />
           </article>
 
           <article>
@@ -32,7 +34,7 @@ const Destination = ({ destination }: IDestination): JSX.Element => {
             </div>
           </article>
         </section>
-      )).slice(3)}
+      )).slice(0,1)}
     </>
   );
 };
