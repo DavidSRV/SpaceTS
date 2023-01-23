@@ -1,5 +1,6 @@
 import React from "react";
 import { IDestination } from "../../utils/models/interfaces";
+import  "./_destinations.scss";
 
 const Destination = ({ destination }: IDestination): JSX.Element => {
 
@@ -7,29 +8,30 @@ const Destination = ({ destination }: IDestination): JSX.Element => {
   return (
     <>
       {destination.map((destination) => (
-        <section>
-          <article className="container__img">
+        <section className="section">
+
+          <article className="section__containerImg">
             <img src={destination.images.png} alt={destination.name} />
           </article>
 
           <article>
-            <div className="description__contaner">
-              <div className="description__scroll">
+            <div className="section__description">
+              <div className="section__select">
 
               </div>
 
-              <p className="description__name">{destination.name}</p>
-              <p className="description__description">
+              <p className="section__name">{destination.name}</p>
+              <p className="section__description">
                 {destination.description}
               </p>
 
               <hr />
 
-              <div className="description__section">
-                <p className="description__kilometers">
+              <div className="section__containerKmDays">
+                <p className="section__descriptionsKmDays">
                   {destination.distance}
                 </p>
-                <p className="dsecription__days">{destination.travel}</p>
+                <p className="section__days">{destination.travel}</p>
               </div>
             </div>
           </article>
