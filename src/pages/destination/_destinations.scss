@@ -13,15 +13,21 @@ section {
     & .section__containerInfo {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         width: 445px;
         height: 472px;
+
 
         & .section__select {
             display: flex;
             width: 50%;
 
             & .section__button {
-                width: 10%;
+                width: 13%;
+                height: 1.5px;
+                cursor: pointer;
+                background-color: white;
+                opacity: 0.3;
             }
 
         }
@@ -29,15 +35,36 @@ section {
         & .section__name{
             font-size: 100px;
             text-transform: uppercase;
+            margin: 20px 0 0 0;
         }
 
         & .section__description{
             font-size: 18px;
+            line-height: 32px;
         }
 
         & .section__line{
             width: 100%;
+            margin: 20px 0;
             border-color:rgba(255, 255, 255, 0.136);
+        }
+
+        & .section__containerKmDays{
+            display: flex;
+            align-items: flex-start;
+            gap: 25%;
+
+            & .section__Km{
+                font-size: 28px;
+                text-transform: uppercase;
+            }
+
+            & .section__days{
+                font-size: 28px;
+                text-transform: uppercase;
+            }
+
+
         }
 
     }

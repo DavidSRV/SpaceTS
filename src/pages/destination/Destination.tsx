@@ -30,7 +30,7 @@ const Destination = ({ destination }: IDestination): JSX.Element => {
                 <hr className="section__line" />
 
                 <div className="section__containerKmDays">
-                  <p className="section__descriptionsKmDays">
+                  <p className="section__Km">
                     {destination.distance}
                   </p>
                   <p className="section__days">{destination.travel}</p>
