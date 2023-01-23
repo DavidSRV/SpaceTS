@@ -1,8 +1,35 @@
 section{
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: space-around;
+    height: 80vh;
     align-items: flex-end;
     color: white;
-    height: 80vh;
+
+    & .section__containerImg{
+        img{
+
+        }
+    }
+
+    & .section__containerInfo{
+        display: flex;
+        flex-direction: column;
+        width: 445px;
+        height: 472px;
+
+        & .section__select{
+            display: flex;
+            width: 50%;
+
+            & .section__button{
+                width: 10%;
+            }
+            
+
+        }
+
+    }
+
 
 }
