@@ -1,4 +1,4 @@
-section{
+section {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -6,27 +6,38 @@ section{
     align-items: flex-end;
     color: white;
 
-    & .section__containerImg{
-        img{
-
-        }
+    & .section__containerImg {
+        img {}
     }
 
-    & .section__containerInfo{
+    & .section__containerInfo {
         display: flex;
         flex-direction: column;
         width: 445px;
         height: 472px;
 
-        & .section__select{
+        & .section__select {
             display: flex;
             width: 50%;
 
-            & .section__button{
+            & .section__button {
                 width: 10%;
             }
-            
 
+        }
+
+        & .section__name{
+            font-size: 100px;
+            text-transform: uppercase;
+        }
+
+        & .section__description{
+            font-size: 18px;
+        }
+
+        & .section__line{
+            width: 100%;
+            border-color:rgba(255, 255, 255, 0.136);
         }
 
     }
