@@ -2,7 +2,6 @@ import Home from "./pages/home/Home";
 import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/navbar/NavBar";
 import Crew from "./pages/crew/Crew";
-import Destination from "./pages/destination/Destination";
 import Technology from "./pages/technology/Technology";
 import { useState } from "react";
 import europaImg from "./assets/destination/image-europa.png";
@@ -10,6 +9,7 @@ import moonImg from "./assets/destination/image-moon.png";
 import marsImg from "./assets/destination/image-mars.png";
 import titanImg from "./assets/destination/image-titan.png";
 import { IDestination } from "./utils/models/interfaces";
+import { Destination } from "./pages/destination/Destination";
 
 function App(): JSX.Element {
   const [destination, setDestination] = useState<IDestination["destination"]>([

@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IDestination } from "../../utils/models/interfaces";
 import "./_destinations.scss";
 
-const Destination = ({ destination }: IDestination): JSX.Element => {
+interface IRender {
+ render:number[] 
+ setRender: React.Dispatch<React.SetStateAction<number[]>>
+}
+
+export const Destination = ({ destination }: IDestination): JSX.Element => {
+  let [render, setRender] = useState<IRender["render"]>([0,1]);
+
   return (
     <>
       {destination
         .map((destination) => (
           <section className="section">
-
             <article className="section__containerImg">
               <img src={destination.images.png} alt={destination.name} />
             </article>
@@ -16,10 +22,10 @@ const Destination = ({ destination }: IDestination): JSX.Element => {
             <article>
               <div className="section__containerInfo">
                 <div className="section__select">
-                  <hr className="section__button" />
-                  <hr className="section__button" />
-                  <hr className="section__button" />
-                  <hr className="section__button" />
+                  <hr className="section__button" onClick={() => setRender(render = [0,1])} />
+                  <hr className="section__button" onClick={() => setRender(render = [1,2])}/>
+                  <hr className="section__button" onClick={() => setRender(render = [2,3])}/>
+                  <hr className="section__button" onClick={() => setRender(render = [3,4])}/>
                 </div>
 
                 <p className="section__name">{destination.name}</p>
@@ -30,18 +36,14 @@ const Destination = ({ destination }: IDestination): JSX.Element => {
                 <hr className="section__line" />
 
                 <div className="section__containerKmDays">
-                  <p className="section__Km">
-                    {destination.distance}
-                  </p>
+                  <p className="section__Km">{destination.distance}</p>
                   <p className="section__days">{destination.travel}</p>
                 </div>
               </div>
             </article>
           </section>
         ))
-        .slice(0, 1)}
+        .slice(render[0], render[1])}
     </>
   );
 };
-
-export default Destination;

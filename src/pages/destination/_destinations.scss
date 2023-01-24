@@ -1,13 +1,15 @@
 section {
     display: flex;
-    align-items: center;
     justify-content: space-around;
     height: 80vh;
     align-items: flex-end;
     color: white;
 
     & .section__containerImg {
-        img {}
+        img {
+            flex: 50%;
+            width: 100%;
+        }
     }
 
     & .section__containerInfo {
@@ -32,34 +34,34 @@ section {
 
         }
 
-        & .section__name{
+        & .section__name {
             font-size: 100px;
             text-transform: uppercase;
             margin: 20px 0 0 0;
         }
 
-        & .section__description{
+        & .section__description {
             font-size: 18px;
             line-height: 32px;
         }
 
-        & .section__line{
+        & .section__line {
             width: 100%;
             margin: 20px 0;
-            border-color:rgba(255, 255, 255, 0.136);
+            border-color: rgba(255, 255, 255, 0.136);
         }
 
-        & .section__containerKmDays{
+        & .section__containerKmDays {
             display: flex;
             align-items: flex-start;
             gap: 25%;
 
-            & .section__Km{
+            & .section__Km {
                 font-size: 28px;
                 text-transform: uppercase;
             }
 
-            & .section__days{
+            & .section__days {
                 font-size: 28px;
                 text-transform: uppercase;
             }
