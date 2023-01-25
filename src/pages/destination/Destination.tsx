@@ -22,10 +22,10 @@ export const Destination = ({ destination }: IDestination): JSX.Element => {
             <article>
               <div className="section__containerInfo">
                 <div className="section__select">
-                  <hr className="section__button" onClick={() => setRender(render = [0,1])} />
-                  <hr className="section__button" onClick={() => setRender(render = [1,2])}/>
-                  <hr className="section__button" onClick={() => setRender(render = [2,3])}/>
-                  <hr className="section__button" onClick={() => setRender(render = [3,4])}/>
+                  <hr className="section__button"  />
+                  <hr className="section__button" />
+                  <hr className="section__button" />
+                  <hr className="section__button" />
                 </div>
 
                 <p className="section__name">{destination.name}</p>
