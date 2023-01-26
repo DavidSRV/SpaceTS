@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./_navbar.scss";
 import icon from "../../assets/shared/logo.svg";
 import { Link } from "react-router-dom";
 
-
 const NavBar: React.FC = () => {
-
 
   return (
     <nav className="navBar">

@@ -64,11 +64,11 @@ function App(): JSX.Element {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Crew" element={<Crew />} />
         <Route
           path="/Destination"
           element={<Destination destination={destination} />}
         />
+        <Route path="/Crew" element={<Crew />} />
         <Route path="/Technology" element={<Technology />} />
       </Routes>
     </div>
