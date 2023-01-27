@@ -31,7 +31,8 @@ const Moon = ({destination}:IDestination):JSX.Element => {
           </div>
         </article>
       </section>
-    ))}
+    )).slice(0,1) 
+    }
   </>
   )
 }
