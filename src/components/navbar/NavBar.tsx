@@ -11,7 +11,7 @@ const NavBar: React.FC = () => {
         <img className="navBar__icon" src={icon} alt="Icon" />
         <div className="navBar__links">
           <Link to="/">00 Home</Link>
-          <Link to="/Destination">01 Destination</Link>
+          <Link to="/Destination/Moon">01 Destination</Link>
           <Link to="/Crew">02 Crew</Link>
           <Link to="/Technology">03 Technology</Link>
         </div>

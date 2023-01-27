@@ -14,7 +14,7 @@ const Home: React.FC = () => {
           experience!
         </p>
       </section>
-      <Link to="/Destination">
+      <Link to="/Destination/Moon">
         <section className="home__button">
           <div className="home__button--hover">
             <p className="home__button__description">EXPLORE</p>
