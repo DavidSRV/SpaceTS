@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import ViewDestination from '../../../components/viewDestination/ViewDestination';
-import { IDestination } from '../../../utils/models/interfaces'
+import { PostitionContext } from '../../../context/PostitionSlice';
+import { IDestination, IpositionContextType } from '../../../utils/models/interfaces'
 
-const Mars = ({destination, position}:IDestination):JSX.Element => {
-  return  <ViewDestination destination={destination}  />;
+const Mars = ({destination}:IDestination):JSX.Element => {
+
+  let {numbers, setNumbers} = useContext(PostitionContext) as IpositionContextType;
+
+  useEffect(()=> {
+    setNumbers({
+      position1: 1,
+      position2:2
+    })
+  },[setNumbers])
+
+  return  <ViewDestination destination={destination}/>;
 }
 ;
 

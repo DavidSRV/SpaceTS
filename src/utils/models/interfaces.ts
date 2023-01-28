@@ -10,11 +10,18 @@ export interface IDestination {
 }
 
 export interface Iposition {
-  position1: number;
-  position2: number;
+  position: {
+    position1: number | undefined;
+    position2: number | undefined;
+  };
 }
 
 export type IpositionContextType = {
-  numbers: Iposition;
-  setNumbers: React.Dispatch<React.SetStateAction<Iposition>>;
+  numbers: Iposition["position"];
+  setNumbers: React.Dispatch<
+    React.SetStateAction<{
+      position1: number | undefined;
+      position2: number | undefined;
+    }>
+  >;
 };

@@ -1,20 +1,19 @@
 import Home from "./pages/home/Home";
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/navbar/NavBar";
 import Crew from "./pages/crew/Crew";
 import Technology from "./pages/technology/Technology";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import europaImg from "./assets/destination/image-europa.png";
 import moonImg from "./assets/destination/image-moon.png";
 import marsImg from "./assets/destination/image-mars.png";
 import titanImg from "./assets/destination/image-titan.png";
-import { IDestination, IpositionContextType } from "./utils/models/interfaces";
+import { IDestination } from "./utils/models/interfaces";
 import { Destination } from "./pages/destination/Destination";
 import Moon from "./pages/destination/pagesDestination/Moon";
 import Titan from "./pages/destination/pagesDestination/Titan";
 import Mars from "./pages/destination/pagesDestination/Mars";
 import Europa from "./pages/destination/pagesDestination/Europa";
-import { PostitionContext } from "./context/PostitionSlice";
 
 function App(): JSX.Element {
   const [destination, setDestination] = useState<IDestination["destination"]>([
@@ -64,13 +63,14 @@ function App(): JSX.Element {
     },
   ]);
 
-  // let {numbers, setNumbers} = useContext(PostitionContext) as IpositionContextType
 
   return (
     <div className="App">
       <NavBar />
+
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route
           path="/Destination/"
           element={<Destination destination={destination} />}
@@ -80,6 +80,7 @@ function App(): JSX.Element {
           <Route path="Europa" element={<Europa destination={destination}  />} />
           <Route path="Titan" element={<Titan destination={destination}   />} />
         </Route>
+
         <Route path="/Crew" element={<Crew />} />
         <Route path="/Technology" element={<Technology />} />
       </Routes>

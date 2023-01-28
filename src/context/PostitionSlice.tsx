@@ -8,9 +8,9 @@ interface Iprops {
 export const PostitionContext = createContext<IpositionContextType | null>(null);
 
 export const PositionProvider  = ({ children }:Iprops) => {
-    const [numbers, setNumbers] = useState<Iposition>({
-        position1:1,
-        position2:2
+    const [numbers, setNumbers] = useState<Iposition["position"]>({
+        position1:0,
+        position2:1
     });
 
     return (<PostitionContext.Provider value={{numbers, setNumbers}}>{children}</PostitionContext.Provider>);
