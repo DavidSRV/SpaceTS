@@ -12,7 +12,7 @@ const Europa = ({destination}:IDestination):JSX.Element => {
       position1:2,
       position2:3
     })
-  },[useEffect])
+  },[setNumbers])
 
   return (
     <>
