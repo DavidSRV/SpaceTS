@@ -1,10 +1,10 @@
 import React from 'react'
+import ViewDestination from '../../../components/viewDestination/ViewDestination';
 import { IDestination } from '../../../utils/models/interfaces'
 
-const Mars = ({destination}:IDestination):JSX.Element => {
-  return (
-    <div>Titan</div>
-  )
+const Mars = ({destination, position}:IDestination):JSX.Element => {
+  return  <ViewDestination destination={destination}  />;
 }
+;
 
-export default Mars
+export default Mars;

@@ -3,17 +3,18 @@ import { Route, Router, Routes } from "react-router-dom";
 import NavBar from "./components/navbar/NavBar";
 import Crew from "./pages/crew/Crew";
 import Technology from "./pages/technology/Technology";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import europaImg from "./assets/destination/image-europa.png";
 import moonImg from "./assets/destination/image-moon.png";
 import marsImg from "./assets/destination/image-mars.png";
 import titanImg from "./assets/destination/image-titan.png";
-import { IDestination } from "./utils/models/interfaces";
+import { IDestination, IpositionContextType } from "./utils/models/interfaces";
 import { Destination } from "./pages/destination/Destination";
 import Moon from "./pages/destination/pagesDestination/Moon";
 import Titan from "./pages/destination/pagesDestination/Titan";
 import Mars from "./pages/destination/pagesDestination/Mars";
 import Europa from "./pages/destination/pagesDestination/Europa";
+import { PostitionContext } from "./context/PostitionSlice";
 
 function App(): JSX.Element {
   const [destination, setDestination] = useState<IDestination["destination"]>([
@@ -63,6 +64,8 @@ function App(): JSX.Element {
     },
   ]);
 
+  // let {numbers, setNumbers} = useContext(PostitionContext) as IpositionContextType
+
   return (
     <div className="App">
       <NavBar />
@@ -73,9 +76,9 @@ function App(): JSX.Element {
           element={<Destination destination={destination} />}
         >
           <Route path="Moon" element={<Moon destination={destination} />} />
-          <Route path="Mars" element={<Mars destination={destination} />} />
-          <Route path="Europa" element={<Europa destination={destination} />} />
-          <Route path="Titan" element={<Titan destination={destination} />} />
+          <Route path="Mars" element={<Mars destination={destination}  />} />
+          <Route path="Europa" element={<Europa destination={destination}  />} />
+          <Route path="Titan" element={<Titan destination={destination}   />} />
         </Route>
         <Route path="/Crew" element={<Crew />} />
         <Route path="/Technology" element={<Technology />} />

@@ -4,7 +4,7 @@ import { IDestination } from '../../../utils/models/interfaces'
 const Europa = ({destination}:IDestination):JSX.Element => {
   return (
     <>
-        
+    
     </>
   )
 }
