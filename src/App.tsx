@@ -1,5 +1,5 @@
 import Home from "./pages/home/Home";
-import { Route, Routes } from "react-router-dom";
+import { Route, Router, Routes } from "react-router-dom";
 import NavBar from "./components/navbar/NavBar";
 import Crew from "./pages/crew/Crew";
 import Technology from "./pages/technology/Technology";
@@ -14,6 +14,10 @@ import Moon from "./pages/destination/pagesDestination/Moon";
 import Titan from "./pages/destination/pagesDestination/Titan";
 import Mars from "./pages/destination/pagesDestination/Mars";
 import Europa from "./pages/destination/pagesDestination/Europa";
+import Commander from "./pages/crew/pagesCrew/Commander";
+import MissionSpecialist from "./pages/crew/pagesCrew/MissionSpecialist";
+import Pilot from "./pages/crew/pagesCrew/Pilot";
+import FlightEngineer from "./pages/crew/pagesCrew/FlightEngineer";
 
 function App(): JSX.Element {
   const [destination, setDestination] = useState<IDestination["destination"]>([
@@ -63,6 +67,9 @@ function App(): JSX.Element {
     },
   ]);
 
+  const [crew, setCrew] = useState<[]>([{
+    
+  }])
 
   return (
     <div className="App">
@@ -76,12 +83,18 @@ function App(): JSX.Element {
           element={<Destination destination={destination} />}
         >
           <Route path="Moon" element={<Moon destination={destination} />} />
-          <Route path="Mars" element={<Mars destination={destination}  />} />
-          <Route path="Europa" element={<Europa destination={destination}  />} />
-          <Route path="Titan" element={<Titan destination={destination}   />} />
+          <Route path="Mars" element={<Mars destination={destination} />} />
+          <Route path="Europa" element={<Europa destination={destination} />} />
+          <Route path="Titan" element={<Titan destination={destination} />} />
         </Route>
 
-        <Route path="/Crew" element={<Crew />} />
+        <Route path="/Crew/" element={<Crew crew={} />}>
+          <Route path="Coomander" element={<Commander />} />
+          <Route path="MissionSpecialist" element={<MissionSpecialist />} />
+          <Route path="Pilot" element={<Pilot />} />
+          <Route path="FlightEngineer" element={<FlightEngineer />} />
+        </Route>
+
         <Route path="/Technology" element={<Technology />} />
       </Routes>
     </div>

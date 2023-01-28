@@ -5,12 +5,14 @@ import {
   IpositionContextType,
 } from "../../utils/models/interfaces";
 import "./_viewDestination.scss";
-import { Link } from "react-router-dom";
+import { Link, NavLink, NavLinkProps } from "react-router-dom";
 
 const ViewDestination = ({ destination }: IDestination): JSX.Element => {
   let { numbers, setNumbers } = useContext(
     PostitionContext
   ) as IpositionContextType;
+
+  
 
   return (
     <>
@@ -24,22 +26,13 @@ const ViewDestination = ({ destination }: IDestination): JSX.Element => {
             <article>
               <div className="section__containerInfo">
                 <div className="section__select">
+                  <Link to="/Destination/Moon" className="section__button" />
 
-                  <Link to="/Destination/Moon" className="section__button">
-                    <hr  />
-                  </Link>
+                  <Link to="/Destination/Mars" className="section__button" />
 
-                  <Link to="/Destination/Mars"  className="section__button">
-                    <hr className="section__button" />
-                  </Link>
+                  <Link to="/Destination/Europa" className="section__button" />
 
-                  <Link to="/Destination/Europa"  className="section__button">
-                    <hr className="section__button" />
-                  </Link>
-
-                  <Link to="/Destination/Titan"  className="section__button">
-                    <hr className="section__button" />
-                  </Link>
+                  <Link to="/Destination/Titan" className="section__button" />
                 </div>
 
                 <p className="section__name">{destination.name}</p>
