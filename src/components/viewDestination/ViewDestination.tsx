@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { PostitionContext } from '../../context/PostitionSlice'
 import { IDestination, IpositionContextType } from '../../utils/models/interfaces'
 import './_viewDestination.scss'
