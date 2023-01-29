@@ -3,9 +3,9 @@ import { Outlet } from "react-router";
 
 const Crew = (): JSX.Element => {
   return (
-    <div>
+    <>
       <Outlet />
-    </div>
+    </>
   );
 };
 

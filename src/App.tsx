@@ -18,7 +18,10 @@ import Commander from "./pages/crew/pagesCrew/Commander";
 import MissionSpecialist from "./pages/crew/pagesCrew/MissionSpecialist";
 import Pilot from "./pages/crew/pagesCrew/Pilot";
 import FlightEngineer from "./pages/crew/pagesCrew/FlightEngineer";
-import infodata from "./utils/data.json"
+import CommanderImg from "./assets/crew/image-douglas-hurley.png"
+import MissionImg from "./assets/crew/image-mark-shuttleworth.png"
+import PilotImg from "./assets/crew/image-victor-glover.png"
+import FlightImg from "./assets/crew/image-anousheh-ansari.png"
 
 function App(): JSX.Element {
 
@@ -69,27 +72,44 @@ function App(): JSX.Element {
     },
   ]);
 
-  const [crew, setCrew] =useState<ICrew["crew"]>([
+  const [crew, setCrew] = useState<ICrew["crew"]>( [
     {
-    "name": "Douglas Hurley",
-    "role": "Commander",
-    "bio": "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2."
-  },
-  {
-    "name": "Mark Shuttleworth",
-    "role": "Mission Specialist",
-    "bio": "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist."
-  },
-  {
-    "name": "Victor Glover",
-    "role": "Pilot",
-    "bio": "Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer."
-  },
-  {
-    "name": "Anousheh Ansari",
-    "role": "Flight Engineer",
-    "bio": "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space."
-  }])
+      "name": "Douglas Hurley",
+      "images": {
+        "png": CommanderImg,
+        "webp": "../../assets/crew/image-douglas-hurley.webp"
+      },
+      "role": "Commander",
+      "bio": "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2."
+    },
+    {
+      "name": "Mark Shuttleworth",
+      "images": {
+        "png": MissionImg,
+        "webp": "../../assets/crew/image-mark-shuttleworth.webp"
+      },
+      "role": "Mission Specialist",
+      "bio": "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist."
+    },
+    {
+      "name": "Victor Glover",
+      "images": {
+        "png": PilotImg,
+        "webp": "../../assets/crew/image-victor-glover.webp"
+      },
+      "role": "Pilot",
+      "bio": "Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer."
+    },
+    {
+      "name": "Anousheh Ansari",
+      "images": {
+        "png": FlightImg,
+        "webp": "../../assets/crew/image-anousheh-ansari.webp"
+      },
+      "role": "Flight Engineer",
+      "bio": "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space."
+    }
+  ],)
 
 
   return (
@@ -101,7 +121,7 @@ function App(): JSX.Element {
 
         <Route
           path="/Destination/"
-          element={<Destination destination={destination} />}
+          element={<Destination />}
         >
           <Route path="Moon" element={<Moon destination={destination} />} />
           <Route path="Mars" element={<Mars destination={destination} />} />
@@ -111,13 +131,15 @@ function App(): JSX.Element {
 
         <Route path="/Crew/" element={<Crew  />}>
           
-          <Route path="Coomander" element={<Commander crew={crew} />} />
+          <Route path="Commander" element={<Commander crew={crew} />} />
           <Route path="MissionSpecialist" element={<MissionSpecialist crew={crew} />} />
           <Route path="Pilot" element={<Pilot crew={crew}/>} />
           <Route path="FlightEngineer" element={<FlightEngineer crew={crew} />} />
         </Route>
 
-        <Route path="/Technology" element={<Technology />} />
+        <Route path="/Technology" element={<Technology />} >
+          
+        </Route>
       </Routes>
     </div>
   );

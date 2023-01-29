@@ -5,14 +5,12 @@ import {
   IpositionContextType,
 } from "../../utils/models/interfaces";
 import "./_viewDestination.scss";
-import { Link, NavLink, NavLinkProps } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ViewDestination = ({ destination }: IDestination): JSX.Element => {
   let { numbers, setNumbers } = useContext(
     PostitionContext
   ) as IpositionContextType;
-
-  
 
   return (
     <>
