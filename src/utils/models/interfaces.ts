@@ -9,6 +9,35 @@ export interface IDestination {
   position?: number[];
 }
 
+export interface ICrew{
+  crew: {
+    name:string,
+    role:string,
+    bio:string
+  }[]
+}
+
+
+// export interface Idata {
+//   destination: {
+//     name: string;
+//     desciption: string;
+//     distance: string;
+//     travel: string;
+//   }[];
+//   crew: {
+//     name: string;
+//     role: string;
+//     bio: string;
+//   }[];
+//   technology: {
+//     name: string;
+//     description: string;
+//   }[];
+// }
+
+
+
 export interface Iposition {
   position: {
     position1: number | undefined;

@@ -1,6 +1,7 @@
 import React from 'react'
+import { ICrew } from '../../../utils/models/interfaces'
 
-function FlightEngineer() {
+function FlightEngineer({crew}:ICrew) {
   return (
     <div>FlightEngineer</div>
   )

@@ -1,5 +1,5 @@
 import Home from "./pages/home/Home";
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/navbar/NavBar";
 import Crew from "./pages/crew/Crew";
 import Technology from "./pages/technology/Technology";
@@ -8,7 +8,7 @@ import europaImg from "./assets/destination/image-europa.png";
 import moonImg from "./assets/destination/image-moon.png";
 import marsImg from "./assets/destination/image-mars.png";
 import titanImg from "./assets/destination/image-titan.png";
-import { IDestination } from "./utils/models/interfaces";
+import { ICrew, IDestination } from "./utils/models/interfaces";
 import { Destination } from "./pages/destination/Destination";
 import Moon from "./pages/destination/pagesDestination/Moon";
 import Titan from "./pages/destination/pagesDestination/Titan";
@@ -18,8 +18,10 @@ import Commander from "./pages/crew/pagesCrew/Commander";
 import MissionSpecialist from "./pages/crew/pagesCrew/MissionSpecialist";
 import Pilot from "./pages/crew/pagesCrew/Pilot";
 import FlightEngineer from "./pages/crew/pagesCrew/FlightEngineer";
+import infodata from "./utils/data.json"
 
 function App(): JSX.Element {
+
   const [destination, setDestination] = useState<IDestination["destination"]>([
     {
       name: "Moon",
@@ -67,9 +69,28 @@ function App(): JSX.Element {
     },
   ]);
 
-  const [crew, setCrew] = useState<[]>([{
-    
+  const [crew, setCrew] =useState<ICrew["crew"]>([
+    {
+    "name": "Douglas Hurley",
+    "role": "Commander",
+    "bio": "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2."
+  },
+  {
+    "name": "Mark Shuttleworth",
+    "role": "Mission Specialist",
+    "bio": "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist."
+  },
+  {
+    "name": "Victor Glover",
+    "role": "Pilot",
+    "bio": "Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer."
+  },
+  {
+    "name": "Anousheh Ansari",
+    "role": "Flight Engineer",
+    "bio": "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space."
   }])
+
 
   return (
     <div className="App">
@@ -88,11 +109,12 @@ function App(): JSX.Element {
           <Route path="Titan" element={<Titan destination={destination} />} />
         </Route>
 
-        <Route path="/Crew/" element={<Crew crew={} />}>
-          <Route path="Coomander" element={<Commander />} />
-          <Route path="MissionSpecialist" element={<MissionSpecialist />} />
-          <Route path="Pilot" element={<Pilot />} />
-          <Route path="FlightEngineer" element={<FlightEngineer />} />
+        <Route path="/Crew/" element={<Crew  />}>
+          
+          <Route path="Coomander" element={<Commander crew={crew} />} />
+          <Route path="MissionSpecialist" element={<MissionSpecialist crew={crew} />} />
+          <Route path="Pilot" element={<Pilot crew={crew}/>} />
+          <Route path="FlightEngineer" element={<FlightEngineer crew={crew} />} />
         </Route>
 
         <Route path="/Technology" element={<Technology />} />
