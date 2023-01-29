@@ -1,20 +1,16 @@
 import React, { useContext } from "react";
 import { PostitionContext } from "../../context/PostitionSlice";
-import {
-  IDestination,
-  IpositionContextType,
-} from "../../utils/models/interfaces";
+import { IpositionContextType } from "../../utils/models/interfaces";
 import "./_viewDestination.scss";
 import { Link } from "react-router-dom";
 
-const ViewDestination = ({ destination }: IDestination): JSX.Element => {
-  let { numbers, setNumbers } = useContext(
-    PostitionContext
-  ) as IpositionContextType;
+const ViewDestination = (): JSX.Element => {
+  let { numbers, info } = useContext(PostitionContext) as IpositionContextType;
 
   return (
     <>
-      {destination
+      {info.destinations
+        .slice(numbers.position1, numbers.position2)
         .map((destination) => (
           <section className="section" key={destination.name}>
             <article className="section__containerImg">
@@ -47,8 +43,7 @@ const ViewDestination = ({ destination }: IDestination): JSX.Element => {
               </div>
             </article>
           </section>
-        ))
-        .slice(numbers.position1, numbers.position2)}
+        ))}
     </>
   );
 };

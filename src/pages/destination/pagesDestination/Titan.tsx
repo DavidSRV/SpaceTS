@@ -2,12 +2,11 @@ import React, { useContext, useEffect } from "react";
 import ViewDestination from "../../../components/viewDestination/ViewDestination";
 import { PostitionContext } from "../../../context/PostitionSlice";
 import {
-  IDestination,
   IpositionContextType,
 } from "../../../utils/models/interfaces";
 
-const Titan = ({ destination }: IDestination): JSX.Element => {
-  let { numbers, setNumbers } = useContext(
+const Titan = (): JSX.Element => {
+  let { setNumbers } = useContext(
     PostitionContext
   ) as IpositionContextType;
 
@@ -18,7 +17,7 @@ const Titan = ({ destination }: IDestination): JSX.Element => {
     });
   }, [setNumbers]);
 
-  return <ViewDestination destination={destination} />;
+  return <ViewDestination  />;
 };
 
 export default Titan;

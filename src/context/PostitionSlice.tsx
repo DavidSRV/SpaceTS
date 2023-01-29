@@ -1,12 +1,10 @@
 import React, { createContext, useState } from "react";
-import { Iposition, IpositionContextType } from "../utils/models/interfaces";
-import info from '../utils/data.json' 
+import { Idata, Iposition, IpositionContextType } from "../utils/models/interfaces";
+import { data } from "../utils/info";
 
 interface Iprops {
     children:JSX.Element | JSX.Element[];
 }
-
-const data = info;
 
 export const PostitionContext = createContext<IpositionContextType | null>(null);
 
@@ -16,9 +14,9 @@ export const PositionProvider  = ({ children }:Iprops) => {
         position2:1
     });
 
-    const [info, setInfo] = useState<any>(data)
+    const [info, setInfo] = useState<Idata>(data)
 
-    return (<PostitionContext.Provider value={{numbers, setNumbers}}>{children}</PostitionContext.Provider>);
+    return (<PostitionContext.Provider value={{numbers, setNumbers, info}}>{children}</PostitionContext.Provider>);
 };
 
 

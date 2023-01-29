@@ -1,9 +1,11 @@
 import React from 'react'
-import { ICrew } from '../../../utils/models/interfaces'
+import ViewCrew from '../../../components/viewCrew/ViewCrew'
 
-function Pilot({crew}:ICrew) {
+function Pilot() {
   return (
-    <div>Pilot</div>
+    <>
+    <ViewCrew/>
+    </>
   )
 }
 
