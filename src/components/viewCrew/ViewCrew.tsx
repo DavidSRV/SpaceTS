@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { PostitionContext } from "../../context/PostitionSlice";
 import { IpositionContextType } from "../../utils/models/interfaces";
-import "./_ViewDestination.scss"
+import './_ViewDestination.scss'
 
 const ViewCrew = (): JSX.Element => {
   let { numbers, info } = useContext(PostitionContext) as IpositionContextType;
