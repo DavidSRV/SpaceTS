@@ -12,7 +12,7 @@ const ViewDestination = (): JSX.Element => {
       {info.destinations
         .slice(numbers.position1, numbers.position2)
         .map((destination) => (
-          <section className="section" key={destination.name}>
+          <section className="section__destination" key={destination.name}>
             <article className="section__containerImg">
               <img src={destination.images.png} alt={destination.name} />
             </article>

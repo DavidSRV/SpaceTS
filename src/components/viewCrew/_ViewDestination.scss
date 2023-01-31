@@ -1,11 +1,74 @@
-.crew{
+.crew {
 
-    & .crew__container__descriptions{
+    & .crew__container__descriptions {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 750px;
+        min-width: 500px;
+        position: relative;
+        justify-content: center;
+        margin-left: 0;
 
-        &
-        
+        & .crew__title {
+            font-size: 2rem;
+            color: grey;
+            line-height: 36px;
+            margin-bottom: 15px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        & .crew__name {
+            font-size: 4rem;
+            line-height: 64px;
+            margin: 0;
+            margin-bottom: 27px;
+            text-transform: uppercase;
+        }
+
+        & .crew__description {
+            font-size: 1.125rem;
+            line-height: 32px;
+            width: 400px;
+        }
+
+        & .crew__button {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+
+            & .crew__circle {
+                display: block;
+                margin-top: 80px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                font-size: 30px;
+                list-style: disc;
+                cursor: pointer;
+                background-color: grey;
+
+                &:hover {
+                    background-color: white;
+                }
+
+            }
+        }
+
     }
+
+
+    & .crew__img {
+
+        img {
+            width: auto;
+            height: 620px;
+            position: absolute;
+            bottom: 0;
+            transform: translateX(-75%);
+        }
+    }
+
+
 }
