@@ -1,7 +1,10 @@
 import React from "react";
+import { Outlet } from "react-router";
 
 const Technology = () => {
-  return <div></div>;
+  return <>
+    <Outlet/>
+  </>;
 };
 
 export default Technology;

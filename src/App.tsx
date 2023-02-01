@@ -35,7 +35,11 @@ function App(): JSX.Element {
           <Route path="FlightEngineer" element={<FlightEngineer />} />
         </Route>
 
-        <Route path="/Technology" element={<Technology />}></Route>
+        <Route path="/Technology/" element={<Technology />}>
+        <Route path="LaunchVehicle" element={}/>
+        <Route path="SpacePort" element={}/>
+        <Route path="SpaceCapsule" element={}/>
+        </Route>
       </Routes>
     </div>
   );
