@@ -15,25 +15,32 @@
 
         & .technology__buttons {
 
-            & span {
+            & a{
 
-                width: 80px;
-                height: 80px;
-                display: grid;
-                place-content: center;
-                border: 1px solid white;
-                border-radius: 50%;
-                font-size: 32px;
-                margin-bottom: 32px;
-                cursor: pointer;
-                transition: all 1s;
-
-                &:hover {
-                    color: black;
-                    background-color: white;
-
+                text-decoration: none;
+                color: white;
+                
+                & span {
+    
+                    width: 80px;
+                    height: 80px;
+                    display: grid;
+                    place-content: center;
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    font-size: 32px;
+                    margin-bottom: 32px;
+                    cursor: pointer;
+                    transition: all 1s;
+    
+                    &:hover {
+                        color: black;
+                        background-color: white;
+    
+                    }
                 }
             }
+
         }
 
         & .technology__description{

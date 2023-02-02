@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { PostitionContext } from "../../context/PostitionSlice";
 import { IpositionContextType } from "../../utils/models/interfaces";
 import "./_viewTechnology.scss";
@@ -14,9 +15,9 @@ const ViewTechnology = (): JSX.Element => {
           <section key={technology.name} className="technology__section">
             <article className="technology__descriptions">
                 <div className="technology__buttons">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
+                <Link to="/Technology/LaunchVehicle"><span>1</span></Link>
+                <Link to="/Technology/SpacePort"><span>2</span></Link>
+                <Link to="/Technology/SpaceCapsule"><span>3</span></Link>
                 </div>
 
                 <div className="technology__description">
