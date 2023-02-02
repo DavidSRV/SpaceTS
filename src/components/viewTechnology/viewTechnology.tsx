@@ -20,7 +20,7 @@ const ViewTechnology = (): JSX.Element => {
                 </div>
 
                 <div className="technology__description">
-                <p className="techonology__title">{technology.name}</p>
+                <p className="technology__title">{technology.name}</p>
                 <p className="technology__descriptionGeneral">{technology.description}</p>
                 </div>
             </article>

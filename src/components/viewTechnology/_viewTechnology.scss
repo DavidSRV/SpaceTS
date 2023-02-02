@@ -1,0 +1,63 @@
+.technology__section {
+
+    display: flex;
+    gap: 130px;
+    margin-top: 60px;
+    margin-left: 165px;
+    align-items: center;
+
+    & .technology__descriptions {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+
+        & .technology__buttons {
+
+            & span {
+
+                width: 80px;
+                height: 80px;
+                display: grid;
+                place-content: center;
+                border: 1px solid white;
+                border-radius: 50%;
+                font-size: 32px;
+                margin-bottom: 32px;
+                cursor: pointer;
+                transition: all 1s;
+
+                &:hover {
+                    color: black;
+                    background-color: white;
+
+                }
+            }
+        }
+
+        & .technology__description{
+
+            width: 470px;
+            height: 303px;
+
+            & .technology__title{
+                font-size: 56px;
+                text-transform: uppercase;
+                line-height: 64px;
+                height: 64px;
+                margin-top: 10px;
+                margin-bottom: 15px;
+
+            }
+
+            & .technology__descriptionGeneral{
+                line-height: 32px;
+                font-size: 22px;
+                font-weight: 400;
+            }
+
+        }
+
+    }
+}
