@@ -12,6 +12,9 @@ import Commander from "./pages/crew/pagesCrew/Commander";
 import Pilot from "./pages/crew/pagesCrew/Pilot";
 import FlightEngineer from "./pages/crew/pagesCrew/FlightEngineer";
 import Crew from "./pages/crew/Crew";
+import LaunchVehicle from "./pages/technology/pagesTechnology/LaunchVehicle";
+import SpacePort from "./pages/technology/pagesTechnology/SpacePort";
+import SpaceCapsule from "./pages/technology/pagesTechnology/SpaceCapsule";
 
 function App(): JSX.Element {
   return (
@@ -36,9 +39,9 @@ function App(): JSX.Element {
         </Route>
 
         <Route path="/Technology/" element={<Technology />}>
-        <Route path="LaunchVehicle" element={}/>
-        <Route path="SpacePort" element={}/>
-        <Route path="SpaceCapsule" element={}/>
+          <Route path="LaunchVehicle" element={<LaunchVehicle />} />
+          <Route path="SpacePort" element={<SpacePort />} />
+          <Route path="SpaceCapsule" element={<SpaceCapsule />} />
         </Route>
       </Routes>
     </div>
