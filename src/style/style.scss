@@ -1,4 +1,26 @@
 @use 'resets';
 @import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
 
+$small: 'small';
+$medium: 'medium';
+$large: 'large';
 
+$screen-small-min: 375px;
+$screen-medium-min: 768px;
+$screen-large-min: 1440px;
+
+@mixin for-size($size) {
+  @if $size == $small {
+    @media (max-width: $screen-small-min) {
+      @content;
+    }
+  } @else if $size == $medium {
+    @media (max-width: $screen-medium-min) {
+      @content;
+    }
+  } @else if $size == $large {
+    @media (max-width: $screen-large-min) {
+      @content;
+    }
+  }
+}
