@@ -3,9 +3,9 @@ import "./_navbar.scss";
 import icon from "../../assets/shared/logo.svg";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
+import NavBarMobile from "./navBarMobile/NavBarMobile";
 
 const NavBar: React.FC = () => {
-
   const isMobile = useMediaQuery({ query: "(max-width: 450px" });
 
   return (
@@ -14,15 +14,15 @@ const NavBar: React.FC = () => {
         <img className="navBar__icon" src={icon} alt="Icon" />
 
         {isMobile ? (
-          <div> IS MOBILE OK </div>
-        ) : <div className="navBar__links">
-        <Link to="/">00 Home</Link>
-        <Link to="/Destination/Moon">01 Destination</Link>
-        <Link to="/Crew/Commander">02 Crew</Link>
-        <Link to="/Technology/LaunchVehicle">03 Technology</Link>
-      </div> }
-          
-        
+          <NavBarMobile/>
+        ) : (
+          <div className="navBar__links">
+            <Link to="/">00 Home</Link>
+            <Link to="/Destination/Moon">01 Destination</Link>
+            <Link to="/Crew/Commander">02 Crew</Link>
+            <Link to="/Technology/LaunchVehicle">03 Technology</Link>
+          </div>
+        )}
       </div>
     </nav>
   );
