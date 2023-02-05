@@ -8,6 +8,16 @@ body {
     background-repeat: no-repeat;
     position: relative;
     height: 100vh;
+
+    @include for-size(medium) {
+        background-image: url('../../assets/home/background-home-tablet.jpg')
+    }
+
+    @include for-size(small) {
+        background-image: url('../../assets/home/background-home-mobile.jpg');
+    }
+
+
 }
 
 .home {
@@ -19,6 +29,11 @@ body {
     margin-bottom: 1rem;
     height: 80vh;
     align-items: flex-end;
+    min-width: 375px;
+
+    @include for-size(small) {
+        height: 90vh;
+    }
 
     & a {
         text-decoration: none;
@@ -32,15 +47,31 @@ body {
         flex-direction: column;
         margin-bottom: 5%;
 
+        @include for-size(small) {
+            align-items: center;
+        }
+
 
         & .home__title {
             font-size: 9.3759rem;
             margin: auto 0 10px;
 
+            @include for-size(small) {
+                font-size: 80px;
+                letter-spacing: 10px;
+            }
+
         }
 
-        & p {
+        & .home__description2 {
             font-size: 1.125rem;
+            color: $basic2;
+
+            @include for-size(small) {
+                font-size: 17px;
+                margin: 30px;
+                text-align: center;
+            }
         }
 
     }
@@ -56,8 +87,14 @@ body {
         transition: 0.5s all;
         margin-bottom: 35%;
 
-        @include for-size(medium){
-            margin: 0 40px;
+        @include for-size(medium) {
+            margin: 0 50px;
+
+        }
+
+        @include for-size(small) {
+            width: 200px;
+            height: 200px;
         }
 
         &:hover {
@@ -67,9 +104,13 @@ body {
             transition: 0.5s all;
         }
 
-        & p {
+        & .home__button__description {
             font-size: 2rem;
             color: $basic3;
+
+            @include for-size(small) {
+                font-size: 1.8rem;
+            }
         }
 
 

@@ -5,8 +5,8 @@ $small: 'small';
 $medium: 'medium';
 $large: 'large';
 
-$screen-small-min: 375px;
-$screen-medium-min: 768px;
+$screen-small-min: 450px;
+$screen-medium-min: 769px;
 $screen-large-min: 1440px;
 
 @mixin for-size($size) {
