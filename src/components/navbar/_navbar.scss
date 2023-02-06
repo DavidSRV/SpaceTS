@@ -16,6 +16,10 @@ nav {
         & .navBar__icon {
             margin-left: 3.438rem;
 
+            @include for-size(small) {
+                margin-left: 30px;
+            }
+            
         } 
 
         & .navBar__links {

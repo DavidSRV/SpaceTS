@@ -32,7 +32,6 @@ body {
     min-width: 375px;
 
     @include for-size(small) {
-        height: 90vh;
         align-content: center;
 
     }
@@ -51,6 +50,7 @@ body {
 
         @include for-size(small) {
             align-items: center;
+            height: 300px;
         }
 
 
@@ -70,9 +70,14 @@ body {
             font-size: 1.125rem;
             color: $basic2;
 
+            @include for-size(medium) {
+               text-align: center;
+               font-size: 1.2rem;
+            }
+
             @include for-size(small) {
                 font-size: 17px;
-                margin: 30px;
+                margin: 20px;
                 text-align: center;
             }
         }
@@ -91,13 +96,13 @@ body {
         margin-bottom: 35%;
 
         @include for-size(medium) {
-            margin: 0 50px;
+            margin: 20px 50px;
 
         }
 
         @include for-size(small) {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
         }
 
         &:hover {
@@ -112,7 +117,7 @@ body {
             color: $basic3;
 
             @include for-size(small) {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
         }
 
