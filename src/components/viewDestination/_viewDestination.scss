@@ -1,15 +1,28 @@
+@use '../../style/colors' as *;
+@use '../../style/style.scss' as *;
+
 .section__destination {
     display: flex;
     justify-content: space-around;
     height: 75vh;
     align-items: flex-end;
-    color: white;
+    color: $basic1;
+    flex-wrap: wrap;
 
+    @include for-size(medium) {
+        height: 85vh;
+        align-content: flex-end;
+    }
 
     & .section__containerImg {
         img {
             flex: 50%;
             width: 100%;
+
+            @include for-size(medium) {
+                width: 300px;
+                margin: 0 30px;
+            }
         }
     }
 
@@ -20,10 +33,24 @@
         width: 445px;
         height: 472px;
 
+
+        @include for-size(medium) {
+            align-items: center;
+            width: 573px;
+        }
+
+        @include for-size(small) {
+            width: 300px;
+        }
+
         & .section__select {
             display: flex;
             width: 60%;
             gap: 20px;
+
+            @include for-size(medium) {
+                justify-content: center;
+            }
 
             & .section__button {
                 display: block;
@@ -33,11 +60,11 @@
                 background-color: rgba(255, 255, 255, 0.144);
                 opacity: 0.3;
                 border-radius: 10px;
-                
+
             }
-            
-            & .section__button:hover{
-               background-color: white;
+
+            & .section__button:hover {
+                background-color: $basic1;
             }
         }
 
@@ -63,14 +90,37 @@
             align-items: flex-start;
             gap: 25%;
 
+            @include for-size(medium) {
+                align-items: center;
+                width: 573px;
+                justify-content: center;
+            }
+
+            @include for-size(small) {
+                width: 300px;
+            }
+
             & .section__Km {
                 font-size: 28px;
                 text-transform: uppercase;
+                @include for-size(small) {
+                    font-size: 24px;
+                }
             }
 
             & .section__days {
                 font-size: 28px;
                 text-transform: uppercase;
+
+                @include for-size(small) {
+                    font-size: 20px;
+                }
+
+                @include for-size(medium) {
+                    align-items: center;
+                    width: 573px;
+                    justify-content: center;
+                }
             }
 
 

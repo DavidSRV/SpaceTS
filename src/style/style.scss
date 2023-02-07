@@ -6,7 +6,7 @@ $medium: 'medium';
 $large: 'large';
 
 $screen-small-min: 450px;
-$screen-medium-min: 769px;
+$screen-medium-min: 900px;
 $screen-large-min: 1440px;
 
 @mixin for-size($size) {
