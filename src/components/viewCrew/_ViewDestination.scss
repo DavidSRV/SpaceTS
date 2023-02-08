@@ -1,3 +1,6 @@
+@use '../../style/colors' as *;
+@use '../../style/style.scss' as *;
+
 .crew {
 
     & .crew__container__descriptions {
@@ -10,6 +13,11 @@
         justify-content: center;
         margin-left: 0;
 
+        @include for-size(medium) {
+            align-items: center;
+        }
+
+
         & .crew__title {
             font-size: 2rem;
             color: grey;
@@ -17,6 +25,11 @@
             margin-bottom: 15px;
             font-weight: 400;
             text-transform: uppercase;
+
+            @include for-size(medium) {
+                margin-top: 50px;
+                font-size: 24px;
+            }
         }
 
         & .crew__name {
@@ -25,12 +38,24 @@
             margin: 0;
             margin-bottom: 27px;
             text-transform: uppercase;
+
+            @include for-size(medium) {
+                font-size: 40px;
+            }
         }
 
         & .crew__description {
             font-size: 1.125rem;
             line-height: 32px;
             width: 400px;
+
+            @include for-size(medium) {
+                text-align: center;
+                font-size: 16px;
+                margin: 0;
+                width: 520px;
+
+            }
         }
 
         & .crew__button {
@@ -48,6 +73,11 @@
                 list-style: disc;
                 cursor: pointer;
                 background-color: grey;
+
+                @include for-size(medium) {
+
+                    margin: 30px 0;
+                }
 
                 &:hover {
                     background-color: white;
@@ -67,8 +97,24 @@
             position: absolute;
             bottom: 0;
             transform: translateX(-75%);
+
+            @include for-size(medium) {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform: translateX(48%);
+                height: 500px;
+
+            }
         }
+
+
     }
 
+}
 
+section {
+    @include for-size(medium) {
+        height: inherit;
+    }
 }
