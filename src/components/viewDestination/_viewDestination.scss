@@ -23,6 +23,11 @@
                 width: 300px;
                 margin: 0 30px;
             }
+
+            @include for-size(small) {
+                width: 175px;
+                margin-bottom: 20px;
+            }
         }
     }
 
@@ -36,7 +41,8 @@
 
         @include for-size(medium) {
             align-items: center;
-            width: 573px;
+            width: 100%;
+            max-width: 575px;
         }
 
         @include for-size(small) {
@@ -51,6 +57,10 @@
             @include for-size(medium) {
                 justify-content: center;
             }
+
+            @include for-size(small) {
+                width: 100%;
+             }
 
             & .section__button {
                 display: block;
@@ -72,11 +82,27 @@
             font-size: 100px;
             text-transform: uppercase;
             margin: 20px 0 0 0;
+
+            @include for-size(small) {
+               font-size: 56px;
+               margin: 10px 0 0 0;
+            }
         }
 
         & .section__description {
             font-size: 21px;
             line-height: 32px;
+            color: $basic2;
+
+            @include for-size(medium) {
+               font-size: 20px;
+               text-align: center;
+            }
+
+            @include for-size(small) {
+                font-size: 18px;
+                margin: 0;
+             }
         }
 
         & .section__line {
@@ -92,12 +118,15 @@
 
             @include for-size(medium) {
                 align-items: center;
-                width: 573px;
+                width: 100%;
                 justify-content: center;
+                margin: 0;
             }
 
             @include for-size(small) {
                 width: 300px;
+                flex-direction: column;
+
             }
 
             & .section__Km {
@@ -116,11 +145,6 @@
                     font-size: 20px;
                 }
 
-                @include for-size(medium) {
-                    align-items: center;
-                    width: 573px;
-                    justify-content: center;
-                }
             }
 
 
