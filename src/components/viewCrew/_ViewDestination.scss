@@ -3,6 +3,19 @@
 
 .crew {
 
+    flex-wrap: wrap;
+
+    @include for-size(medium) {
+        height: 86.7vh;
+        justify-content: center;
+    }
+
+    @include for-size(small) {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-content: center;
+    }
+
     & .crew__container__descriptions {
         display: flex;
         flex-direction: column;
@@ -17,6 +30,9 @@
             align-items: center;
         }
 
+        @include for-size(small) {
+            width: 327px;
+        }
 
         & .crew__title {
             font-size: 2rem;
@@ -31,6 +47,10 @@
                 font-size: 24px;
             }
 
+            @include for-size(small) {
+                font-size: 16px;
+                margin: 30px 0 0 0;
+            }
 
         }
 
@@ -47,6 +67,7 @@
 
             @include for-size(small) {
                 font-size: 24px;
+                margin: 0;
             }
         }
 
@@ -65,17 +86,24 @@
             }
 
             @include for-size(small) {
-                font-size: 15px;
+                font-size: 16px;
                 min-width: 327px;
+                margin: 0;
+                height: 125px;
+                color: $basic2;
+                line-height: 25px;
 
             }
-
         }
 
         & .crew__button {
             display: flex;
             flex-direction: row;
             gap: 24px;
+
+            @include for-size(small) {
+                gap: 18px;
+            }
 
             & .crew__circle {
                 display: block;
@@ -89,8 +117,12 @@
                 background-color: grey;
 
                 @include for-size(medium) {
-
                     margin: 30px 0;
+                }
+
+                @include for-size(small) {
+                    width: 12px;
+                    height: 12px;
                 }
 
                 &:hover {
@@ -105,6 +137,27 @@
 
     & .crew__img {
 
+        @include for-size(medium) {
+            display: grid;
+            place-content: center;
+        }
+
+        @include for-size(small) {
+
+            width: 327px;
+
+            &:after {
+                content: "";
+                width: 300px;
+                border-bottom: 1px solid $line;
+                position: absolute;
+                transform: translate(15px,177px);
+            
+            }
+
+        }
+
+
         img {
             width: auto;
             height: 620px;
@@ -113,40 +166,18 @@
             transform: translateX(-75%);
 
             @include for-size(medium) {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                transform: translateX(48%);
-                height: 500px;
+                position: inherit;
+                transform: inherit;
+                height: 480px;
 
             }
 
             @include for-size(small) {
-                bottom: 60%;
                 height: 177px;
-                transform: translateX(65%);
-
             }
-
 
         }
 
-
     }
-
-}
-
-section {
-    @include for-size(medium) {
-        height: inherit;
-        justify-content: center;
-    }
-
-    @include for-size(small) {
-        height: 75vh;
-    }
-
-
-
 
 }
