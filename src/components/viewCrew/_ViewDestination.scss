@@ -30,6 +30,8 @@
                 margin-top: 50px;
                 font-size: 24px;
             }
+
+
         }
 
         & .crew__name {
@@ -42,20 +44,32 @@
             @include for-size(medium) {
                 font-size: 40px;
             }
+
+            @include for-size(small) {
+                font-size: 24px;
+            }
         }
 
         & .crew__description {
             font-size: 1.125rem;
             line-height: 32px;
-            width: 400px;
+            width: 100%;
+            max-width: 400px;
 
             @include for-size(medium) {
                 text-align: center;
                 font-size: 16px;
                 margin: 0;
-                width: 520px;
+                width: 100%;
+                max-width: 520px;
+            }
+
+            @include for-size(small) {
+                font-size: 15px;
+                min-width: 327px;
 
             }
+
         }
 
         & .crew__button {
@@ -106,6 +120,15 @@
                 height: 500px;
 
             }
+
+            @include for-size(small) {
+                bottom: 60%;
+                height: 177px;
+                transform: translateX(65%);
+
+            }
+
+
         }
 
 
@@ -116,5 +139,14 @@
 section {
     @include for-size(medium) {
         height: inherit;
+        justify-content: center;
     }
+
+    @include for-size(small) {
+        height: 75vh;
+    }
+
+
+
+
 }
