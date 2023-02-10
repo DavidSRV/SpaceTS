@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/SpaceTS/static/css/main.62e9f500.css",
-    "main.js": "/SpaceTS/static/js/main.3b836615.js",
+    "main.js": "/SpaceTS/static/js/main.8104596c.js",
     "static/media/image-victor-glover.png": "/SpaceTS/static/media/image-victor-glover.8a9a5424588b73ec61c2.png",
     "static/media/image-anousheh-ansari.png": "/SpaceTS/static/media/image-anousheh-ansari.2d647128496ddc638acd.png",
     "static/media/image-mark-shuttleworth.png": "/SpaceTS/static/media/image-mark-shuttleworth.fc30f35b05fc0bc4ee47.png",
@@ -22,10 +22,10 @@
     "index.html": "/SpaceTS/index.html",
     "static/media/logo.svg": "/SpaceTS/static/media/logo.565f7f2c0534403f11b71994f4311210.svg",
     "main.62e9f500.css.map": "/SpaceTS/static/css/main.62e9f500.css.map",
-    "main.3b836615.js.map": "/SpaceTS/static/js/main.3b836615.js.map"
+    "main.8104596c.js.map": "/SpaceTS/static/js/main.8104596c.js.map"
   },
   "entrypoints": [
     "static/css/main.62e9f500.css",
-    "static/js/main.3b836615.js"
+    "static/js/main.8104596c.js"
   ]
 }
