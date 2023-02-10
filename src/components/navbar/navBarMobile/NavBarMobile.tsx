@@ -56,7 +56,7 @@ const NavBarMobile = () => {
             >
               <CloseSharpIcon fontWeight="bold" />
             </IconButton>
-            <Link to="/">Home</Link>
+            <Link to="https://davidsrv.github.io/SpaceTS/">Home</Link>
             <Link to="/Destination/Moon">Destination</Link>
             <Link to="/Crew/Commander">Crew</Link>
             <Link to="/Technology/LaunchVehicle">Technology</Link>
