@@ -1,6 +1,6 @@
 import "../../../style/_colors.scss";
 import React, { useState } from "react";
-import { Drawer, IconButton } from "@mui/material";
+import {  Drawer, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Box } from "@mui/system";
 import CloseSharpIcon from "@mui/icons-material/CloseSharp";
@@ -55,7 +55,7 @@ const NavBarMobile = () => {
             >
               <CloseSharpIcon fontWeight="bold" />
             </IconButton>
-            <Link to="https://davidsrv.github.io/SpaceTS/">Home</Link>
+            <Link to="/SpaceTS/">Home</Link>
             <Link to="/Destination/Moon">Destination</Link>
             <Link to="/Crew/Commander">Crew</Link>
             <Link to="/Technology/LaunchVehicle">Technology</Link>
