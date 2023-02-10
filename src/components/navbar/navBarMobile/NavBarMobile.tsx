@@ -59,7 +59,7 @@ const NavBarMobile = () => {
             <Link to="/">Home</Link>
             <Link to="/Destination/Moon">Destination</Link>
             <Link to="/Crew/Commander">Crew</Link>
-            <Link to="/Technology/">Technology</Link>
+            <Link to="/Technology/LaunchVehicle">Technology</Link>
           </div>
         </Box>
       </Drawer>

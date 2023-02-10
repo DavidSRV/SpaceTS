@@ -1,3 +1,7 @@
+@use '../../style/colors' as *;
+@use '../../style/style.scss' as *;
+
+
 .technology__section {
 
     display: flex;
@@ -6,6 +10,19 @@
     margin-left: 165px;
     align-items: center;
 
+    @include for-size(medium) {
+        flex-wrap: wrap-reverse;
+        margin: inherit;
+        gap: inherit;
+        height: 82vh;
+        align-content: center;
+        gap: 60px;
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+    }
+
+
     & .technology__descriptions {
 
         display: flex;
@@ -13,15 +30,40 @@
         align-items: center;
         gap: 80px;
 
+        @include for-size(medium) {
+            flex-direction: column;
+            width: 458px;
+            height: 237px;
+            text-align: center;
+            gap: 44px;
+        }
+        
+        @include for-size(small) {
+            width: 327px;
+            height: 220px;
+            text-align: center;
+            gap: 44px;
+        }
+
         & .technology__buttons {
 
-            & a{
+            @include for-size(medium) {
+                display: flex;
+                gap: 20px;
+            }
+
+            & a {
 
                 text-decoration: none;
                 color: white;
-                
+
+                @include for-size(medium) {
+                    height: 30px;
+
+                 }
+
                 & span {
-    
+
                     width: 80px;
                     height: 80px;
                     display: grid;
@@ -32,23 +74,39 @@
                     margin-bottom: 32px;
                     cursor: pointer;
                     transition: all 1s;
-    
+
+                    @include for-size(medium) {
+                        width: 60px;
+                        height: 60px;
+                        font-size: 24px;
+                    } 
+                    
+                    @include for-size(medium) {
+                        width: 40px;
+                        height: 40px;
+                        font-size: 16px;
+                    }
+
                     &:hover {
                         color: black;
                         background-color: white;
-    
                     }
                 }
             }
 
         }
 
-        & .technology__description{
+        & .technology__description {
 
             width: 470px;
             height: 303px;
 
-            & .technology__title{
+            @include for-size(small) {
+                width: 327px;
+                height: 220px;
+            }
+
+            & .technology__title {
                 font-size: 56px;
                 text-transform: uppercase;
                 line-height: 64px;
@@ -56,15 +114,52 @@
                 margin-top: 10px;
                 margin-bottom: 15px;
 
+                @include for-size(medium) {
+                    font-size: 40px;
+                    margin: inherit;
+                }
+
+                @include for-size(small) {
+                   font-size: 24px;
+                }
+
             }
 
-            & .technology__descriptionGeneral{
+            & .technology__descriptionGeneral {
                 line-height: 32px;
                 font-size: 22px;
                 font-weight: 400;
+                color: $basic2;
+
+                @include for-size(medium) {
+                    font-size: 20px;
+                    line-height: 28px;
+                    margin: 0px;
+                }
+
+                @include for-size(small) {
+                    font-size: 17px;
+                 }
             }
 
         }
 
     }
+
+    & .technology__img {
+        img {
+
+            @include for-size(medium) {
+                max-width: 100%;
+                width: 768px;
+            }
+
+            @include for-size(small) {
+                max-width: 100%;
+                width: 374px;
+            }
+        }
+
+    }
+
 }
