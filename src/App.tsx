@@ -22,7 +22,7 @@ function App(): JSX.Element {
       <NavBar />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/SpaceTS/" element={<Home />} />
 
         <Route path="/Destination/" element={<Destination />}>
           <Route path="Moon" element={<Moon />} />
