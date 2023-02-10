@@ -1,13 +1,12 @@
 import "../../../style/_colors.scss";
 import React, { useState } from "react";
-import { colors, Drawer, IconButton } from "@mui/material";
+import { Drawer, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Box } from "@mui/system";
 import CloseSharpIcon from "@mui/icons-material/CloseSharp";
 import { Link } from "react-router-dom";
 import "./_NavBarMobile.scss"
-import Backdrop from "@mui/material/Backdrop";
-import { Filter3 } from "@mui/icons-material";
+
 
 const NavBarMobile = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
