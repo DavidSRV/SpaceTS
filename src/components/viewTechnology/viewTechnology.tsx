@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { PostitionContext } from "../../context/PostitionSlice";
 import { IpositionContextType } from "../../utils/models/interfaces";
@@ -8,6 +8,10 @@ import "./_viewTechnology.scss";
 const ViewTechnology = (): JSX.Element => {
   let { numbers, info } = useContext(PostitionContext) as IpositionContextType;
   const isTablet = useMediaQuery({ query: "(max-width:900px)" });
+
+  useEffect(()=> {
+    
+  },[])
 
   return (
     <>
