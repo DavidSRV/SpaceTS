@@ -8,6 +8,7 @@
     align-items: flex-end;
     color: $basic1;
     flex-wrap: wrap;
+    background-image: url();
 
     @include for-size(medium) {
         height: 85vh;
