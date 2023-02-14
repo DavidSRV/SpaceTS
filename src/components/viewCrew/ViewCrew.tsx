@@ -1,11 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { PostitionContext } from "../../context/PostitionSlice";
 import { IpositionContextType } from "../../utils/models/interfaces";
 import "./_ViewDestination.scss";
+import background from '../../assets/crew/background-crew-desktop.jpg'
 
 const ViewCrew = (): JSX.Element => {
   let { numbers, info } = useContext(PostitionContext) as IpositionContextType;
+
+  useEffect(()=> {
+    document.body.style.backgroundImage = `url(${background})`
+  },[])
 
   return (
     <>

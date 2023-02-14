@@ -5,13 +5,10 @@ nav {
     padding-top: 2.5rem;
     font-family: 'Barlow Condensed', sans-serif;
 
-    
-
     & .navBar__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
 
         & .navBar__icon {
             margin-left: 3.438rem;
@@ -19,7 +16,6 @@ nav {
             @include for-size(small) {
                 margin-left: 30px;
             }
-            
         } 
 
         & .navBar__links {

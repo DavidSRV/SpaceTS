@@ -3,9 +3,14 @@ import { PostitionContext } from "../../context/PostitionSlice";
 import { IpositionContextType } from "../../utils/models/interfaces";
 import "./_viewDestination.scss";
 import { Link } from "react-router-dom";
+import 
 
 const ViewDestination = (): JSX.Element => {
   let { numbers, info } = useContext(PostitionContext) as IpositionContextType;
+
+  useEffect(()=> {
+    document.body.style.backgroundImage = `url(${background})`
+  },[])
 
   return (
     <>

@@ -8,7 +8,8 @@
     align-items: flex-end;
     color: $basic1;
     flex-wrap: wrap;
-    background-image: url();
+    // z-index: -1000;
+    // background-image: url('../../assets/destination/background-destination-desktop.jpg');
 
     @include for-size(medium) {
         height: 85vh;

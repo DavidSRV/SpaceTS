@@ -4,13 +4,14 @@ import { PostitionContext } from "../../context/PostitionSlice";
 import { IpositionContextType } from "../../utils/models/interfaces";
 import { useMediaQuery } from "react-responsive";
 import "./_viewTechnology.scss";
+import background from "../../assets/technology/background-technology-desktop.jpg"
 
 const ViewTechnology = (): JSX.Element => {
   let { numbers, info } = useContext(PostitionContext) as IpositionContextType;
   const isTablet = useMediaQuery({ query: "(max-width:900px)" });
 
   useEffect(()=> {
-    
+    document.body.style.backgroundImage = `url(${background})`
   },[])
 
   return (
