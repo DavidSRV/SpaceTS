@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect}from "react";
 import { Link } from "react-router-dom";
 import "./_home.scss";
+import background from '../../assets/home/background-home-desktop.jpg'
 
 const Home: React.FC = () => {
+
+  useEffect(()=> {
+    document.body.style.backgroundImage = `url(${background})`
+  },[])
+
   return (
     <main className="home">
       <section className="home__description">

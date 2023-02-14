@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { PostitionContext } from "../../context/PostitionSlice";
 import { IpositionContextType } from "../../utils/models/interfaces";
 import "./_viewDestination.scss";
 import { Link } from "react-router-dom";
-import 
+import background from '../../assets/destination/background-destination-desktop.jpg'
 
 const ViewDestination = (): JSX.Element => {
   let { numbers, info } = useContext(PostitionContext) as IpositionContextType;
