@@ -11,7 +11,7 @@ const NavBar: React.FC = () => {
   return (
     <nav className="navBar">
       <div className="navBar__container">
-        <img className="navBar__icon" src={icon} alt="Icon" />
+        <Link to="/SpaceTS/"><img className="navBar__icon" src={icon} alt="Icon" /></Link>
 
         {isMobile ? (
           <NavBarMobile/>
