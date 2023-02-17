@@ -6,7 +6,7 @@ import { useMediaQuery } from "react-responsive";
 import NavBarMobile from "./navBarMobile/NavBarMobile";
 
 const NavBar: React.FC = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 450px" });
+  const isMobile = useMediaQuery({ query: "(max-width: 550px" });
 
   return (
     <nav className="navBar">
