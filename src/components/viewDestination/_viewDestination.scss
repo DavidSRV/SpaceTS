@@ -3,13 +3,11 @@
 
 .section__destination {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 75vh;
     align-items: flex-end;
     color: $basic1;
     flex-wrap: wrap;
-    // z-index: -1000;
-    // background-image: url('../../assets/destination/background-destination-desktop.jpg');
 
     @include for-size(medium) {
         height: 85vh;
@@ -62,21 +60,25 @@
 
             @include for-size(small) {
                 width: 100%;
-             }
+            }
 
             & .section__button {
-                display: block;
-                width: 13;
+                display: flex;
+                flex-direction: column-reverse;
                 height: 3px;
                 cursor: pointer;
-                background-color: rgba(255, 255, 255, 0.144);
-                opacity: 0.3;
                 border-radius: 10px;
+                color: $basic2;
+                text-decoration: none;
+                font-size: 1.1rem;
+                opacity: 0.5;
+                background-color: $basic2;
 
             }
 
             & .section__button:hover {
                 background-color: $basic1;
+                opacity: 1;
             }
         }
 
@@ -86,8 +88,8 @@
             margin: 20px 0 0 0;
 
             @include for-size(small) {
-               font-size: 56px;
-               margin: 10px 0 0 0;
+                font-size: 56px;
+                margin: 10px 0 0 0;
             }
         }
 
@@ -97,14 +99,14 @@
             color: $basic2;
 
             @include for-size(medium) {
-               font-size: 20px;
-               text-align: center;
+                font-size: 20px;
+                text-align: center;
             }
 
             @include for-size(small) {
                 font-size: 18px;
                 margin: 0;
-             }
+            }
         }
 
         & .section__line {
@@ -134,6 +136,7 @@
             & .section__Km {
                 font-size: 28px;
                 text-transform: uppercase;
+
                 @include for-size(small) {
                     font-size: 24px;
                 }

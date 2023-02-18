@@ -47,16 +47,27 @@ body {
         display: flex;
         flex-direction: column;
         margin-bottom: 5%;
+        align-items: flex-start;
+        justify-content: space-evenly;
+
 
         @include for-size(small) {
             align-items: center;
             height: 300px;
         }
 
+        & .home__description1{
+            font-size: 1.5rem;
+            font-weight: 100;
+            color: $basic2;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
 
         & .home__title {
             font-size: 9.3759rem;
-            margin: auto 0 10px;
+            margin: 1PX 0 10px;
 
             @include for-size(small) {
                 font-size: 80px;

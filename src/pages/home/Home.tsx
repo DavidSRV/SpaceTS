@@ -12,6 +12,7 @@ const Home: React.FC = () => {
   return (
     <main className="home">
       <section className="home__description">
+        <p className="home__description1">So, you want to travel to</p>
         <p className="home__title">SPACE</p>
         <p className="home__description2">
           Let’s face it; if you want to go to space, you might as well genuinely

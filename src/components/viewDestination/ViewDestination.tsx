@@ -25,13 +25,13 @@ const ViewDestination = (): JSX.Element => {
             <article>
               <div className="section__containerInfo">
                 <div className="section__select">
-                  <Link to="/Destination/Moon" className="section__button" />
+                  <Link to="/Destination/Moon" className="section__button" >Moon</Link>
 
-                  <Link to="/Destination/Mars" className="section__button" />
+                  <Link to="/Destination/Mars" className="section__button" > Mars</Link>
 
-                  <Link to="/Destination/Europa" className="section__button" />
+                  <Link to="/Destination/Europa" className="section__button">Europa</Link>
 
-                  <Link to="/Destination/Titan" className="section__button" />
+                  <Link to="/Destination/Titan" className="section__button" >Titan</Link>
                 </div>
 
                 <p className="section__name">{destination.name}</p>
