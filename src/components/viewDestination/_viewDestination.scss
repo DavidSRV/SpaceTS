@@ -18,6 +18,7 @@
         img {
             flex: 50%;
             width: 100%;
+            animation: flow 3s infinite;
 
             @include for-size(medium) {
                 width: 300px;
@@ -37,7 +38,6 @@
         justify-content: center;
         width: 445px;
         height: 472px;
-
 
         @include for-size(medium) {
             align-items: center;
@@ -158,4 +158,8 @@
     }
 
 
+}
+
+@keyframes flow {
+    
 }
