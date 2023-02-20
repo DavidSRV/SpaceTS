@@ -18,7 +18,8 @@
         img {
             flex: 50%;
             width: 100%;
-            animation: flow 3s infinite;
+            position: relative;
+            animation: floting 4s ease-in-out infinite;
 
             @include for-size(medium) {
                 width: 300px;
@@ -73,7 +74,6 @@
                 font-size: 1.1rem;
                 opacity: 0.5;
                 background-color: $basic2;
-
             }
 
             & .section__button:hover {
@@ -152,14 +152,21 @@
 
             }
 
-
         }
 
     }
-
-
 }
 
-@keyframes flow {
-    
-}
+
+@keyframes floting {
+   
+        0% {
+            transform: translatey(0px);
+        }
+        50% {
+            transform: translatey(-20px);
+        }
+        100% {
+            transform: translatey(0px);
+        }
+    }
