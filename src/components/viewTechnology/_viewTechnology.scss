@@ -29,6 +29,7 @@
         justify-content: center;
         align-items: center;
         gap: 80px;
+        flex: 50%;
 
         @include for-size(medium) {
             flex-direction: column;
@@ -98,8 +99,7 @@
 
         & .technology__description {
 
-            width: 470px;
-            height: 303px;
+            width: 60%;
 
             @include for-size(small) {
                 width: 327px;
@@ -110,7 +110,6 @@
                 font-size: 56px;
                 text-transform: uppercase;
                 line-height: 64px;
-                height: 64px;
                 margin-top: 10px;
                 margin-bottom: 15px;
 
@@ -148,6 +147,8 @@
 
     & .technology__img {
         img {
+
+            width: 100%;
 
             @include for-size(medium) {
                 max-width: 100%;

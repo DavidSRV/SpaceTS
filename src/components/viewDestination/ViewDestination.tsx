@@ -12,6 +12,7 @@ const ViewDestination = (): JSX.Element => {
     document.body.style.backgroundImage = `url(${background})`;
   }, []);
 
+
   return (
     <>
       {info.destinations
@@ -30,7 +31,6 @@ const ViewDestination = (): JSX.Element => {
                   </Link>
 
                   <Link to="/Destination/Mars" className="section__button">
-                    {" "}
                     Mars
                   </Link>
 
@@ -47,7 +47,6 @@ const ViewDestination = (): JSX.Element => {
                 <p className="section__description">
                   {destination.description}
                 </p>
-
                 <hr className="section__line" />
 
                     <div className="section__containerKmDays">
