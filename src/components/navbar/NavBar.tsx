@@ -17,10 +17,10 @@ const NavBar: React.FC = () => {
           <NavBarMobile/>
         ) : (
           <div className="navBar__links">
-            <Link to="/SpaceTS/">00 Home</Link>
-            <Link to="/Destination/Moon">01 Destination</Link>
-            <Link to="/Crew/Commander">02 Crew</Link>
-            <Link to="/Technology/LaunchVehicle">03 Technology</Link>
+            <Link to="/SpaceTS/" className="select1">00 Home</Link>
+            <Link to="/Destination/Moon"  className="select1">01 Destination</Link>
+            <Link to="/Crew/Commander"  className="select1">02 Crew</Link>
+            <Link to="/Technology/LaunchVehicle"  className="select1">03 Technology</Link>
           </div>
         )}
       </div>
