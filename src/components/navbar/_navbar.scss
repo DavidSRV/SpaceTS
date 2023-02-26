@@ -47,6 +47,10 @@ nav {
                 transition: 1s all;
             }
 
+            & a.--select::before{
+                opacity: 1;
+            }
+
             & a:hover::before{
                 opacity: 1;
                 transition: 1s all;
