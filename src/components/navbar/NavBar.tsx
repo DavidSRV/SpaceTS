@@ -21,7 +21,7 @@ const NavBar: React.FC = () => {
     select4: ref4
   };
 
-  const handleClick = useSelectOnClick({refs})
+  const handleClick = useSelectOnClick({refs});
 
   return (
     <nav className="navBar">

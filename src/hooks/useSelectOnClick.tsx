@@ -1,4 +1,4 @@
-import { RefObject } from "react";
+import { RefObject, useState } from "react";
 
 type Refs = {
   [key: string]: RefObject<HTMLElement>;
@@ -9,17 +9,29 @@ type UseSelectOnClickProps = {
 };
 
 const useSelectOnClick = ({ refs }: UseSelectOnClickProps) => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const [selectedRef, setSelectedRef] = useState<RefObject<HTMLElement> | null>(
+    null
+  );
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLSpanElement>) => {
     let select = e.currentTarget.className;
 
     Object.entries(refs).forEach(([key, ref]) => {
       if (select === key && ref.current) {
-        ref.current.classList.add("--select");
-      } else if (ref.current) {
-        ref.current.classList.remove("--select");
+        setSelectedRef(ref);
       }
     });
   };
+
+  Object.values(refs).forEach((ref) => {
+    if (ref.current) {
+      if (ref === selectedRef) {
+        ref.current.classList.add("--select");
+      } else {
+        ref.current.classList.remove("--select");
+      }
+    }
+  });
 
   return handleClick;
 };

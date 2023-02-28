@@ -74,14 +74,28 @@
                 font-size: 1.1rem;
                 opacity: 0.5;
                 background-color: $basic2;
-            }
 
+            }
 
             & .section__button:hover {
                 background-color: $basic1;
                 opacity: 1;
+            }
 
-                
+            & .section__button.--select1.--select {
+                opacity: 1; 
+            }
+
+            & .section__button.--select2.--select {
+                opacity: 1; 
+            }
+
+            & .section__button.--select3.--select {
+                opacity: 1; 
+            }
+
+            & .section__button.--select4.--select {
+                opacity: 1; 
             }
         }
 
@@ -162,14 +176,16 @@
 
 
 @keyframes floting {
-   
-        0% {
-            transform: translatey(0px);
-        }
-        50% {
-            transform: translatey(-20px);
-        }
-        100% {
-            transform: translatey(0px);
-        }
+
+    0% {
+        transform: translatey(0px);
     }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
